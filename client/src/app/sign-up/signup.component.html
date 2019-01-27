@@ -1,0 +1,18 @@
+<div class="form-group">
+    <label for="userID">First Name</label>
+    <input type="text" class="form-control" aria-describedby="userIdHelp" placeholder="First Name" [(ngModel)]='user.fName'>
+</div>
+<div class="form-group">
+    <label for="userID">Last Name</label>
+    <input type="text" class="form-control" aria-describedby="userIdHelp" placeholder="Last Name" [(ngModel)]='user.lName'>
+</div>
+<div class="form-group">
+    <label for="userID">User Id</label>
+    <input type="text" class="form-control" aria-describedby="userIdHelp" placeholder="User Id" [(ngModel)]='user.userId'>
+</div>
+<div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" placeholder="Password" [(ngModel)]='user.pwd'>
+</div>
+<p>{{msg}}</p>
+<button type="submit" class="btn btn-primary" (click)='userSignUp()'>Submit</button>
