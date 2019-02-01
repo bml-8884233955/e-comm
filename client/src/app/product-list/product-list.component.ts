@@ -4,13 +4,13 @@ import {MobileService} from '../service/mobile.service';
 
 
 @Component({
-    selector: 'app-list-display',
-    templateUrl: './list-display.component.html',
-    styleUrls: ['list-display.component.css']
+    selector: 'app-product-list',
+    templateUrl: './product-list.component.html',
+    styleUrls: ['product-list.component.css']
 
 })
 
-export class ListDisplayComponent implements OnInit {
+export class ProductListComponent implements OnInit {
     private mobiles;
 
     constructor(private mobileService: MobileService) {

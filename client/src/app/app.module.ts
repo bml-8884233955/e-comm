@@ -11,10 +11,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignInComponent } from './sign-in/signin.component';
 import { SignUpComponent } from './sign-up/signup.component';
-import { ListDisplayComponent } from './list-display/list-display.component';
-import { ListComponent } from './list/list.component';
-import {SearchComponent} from './search/search.component';
-import { FormatDate } from './format-date/format-date.pipe';
+import { ProductsComponent } from './products/products.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { SearchComponent } from './search/search.component';
+import { FormatDate } from './pipes/format-date.pipe';
 
 import { MobileService } from './service/mobile.service';
 import { SignUpService } from './service/signup.service';
@@ -25,8 +25,8 @@ import { SignUpService } from './service/signup.service';
     AppComponent,
     SignInComponent,
     SignUpComponent,
-    ListDisplayComponent,
-    ListComponent,
+    ProductsComponent,
+    ProductListComponent,
     SearchComponent,
     FormatDate
   ],

@@ -26,7 +26,6 @@ export class SignInComponent implements OnInit {
         } else {
             this.msg = 'Please Enter valid user and pwd';
         }
-        console.log("Hello world");
 };
 
 }
