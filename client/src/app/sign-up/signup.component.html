@@ -1,38 +1,47 @@
 <div class='form-container'>
     <div class='form-content'>
-        <form [formGroup] = 'myForm' novalidate>
-            <fieldset formGroupName = 'name'>
-                <div class="form-group">
-                    <label for="userID">First Name</label>
-                    <input type="text" class="form-control" placeholder="First Name" formControlName='fName'>
+        <form [formGroup]='myForm' novalidate (ngSubmit)='onSubmit()'>
+            <fieldset formGroupName='name'>
+                <div class='form-group'>
+                    <label for='userID'>First Name</label>
+                    <input type='text' class='form-control' placeholder='First Name' formControlName='fName'>
                 </div>
-                <div class="form-group">
-                    <label for="userID">Last Name</label>
-                    <input type="text" class="form-control" placeholder="Last Name" formControlName='lName'>
+                <div class='form-group'>
+                    <label for='userID'>Last Name</label>
+                    <input type='text' class='form-control' placeholder='Last Name' formControlName='lName'>
                 </div>
             </fieldset>
-            <div class="form-group">
-                    <label for="userID">Email</label>
-                    <input type="text" class="form-control" placeholder="Email" formControlName='email'>
+            <div class='form-group has-danger' [ngClass]="{'has-success': email.valid && (email.dirty || email.touched), 'has-danger': email.invalid && (email.dirty || email.touched)}">
+                <label for= 'userId'>Email</label>
+                <input id = 'userId' type='text' class='form-control' placeholder='Email' formControlName='email'>
+                <div class='form-control-feedback' *ngIf='email.errors && (email.dirty || email.touched)'>
+                    <p *ngIf='email.errors.required'>Email is required</p>
+                    <p *ngIf='email.errors.pattern'>The Email address must contain at least the @ character</p>
                 </div>
-            <div class="form-group">
-                <label for="userID">User Id</label>
-                <input type="text" class="form-control" placeholder="User Id" formControlName='userId'>
             </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" placeholder="Password" formControlName='pwd'> 
+            <pre>Dirty? {{email.dirty}}</pre>
+            <pre>Pristine? {{email.pristine}}</pre>
+            <pre>Touched? {{email.touched}}</pre>
+            <pre>Untouched? {{email.untouched}}</pre>
+            <pre>Valid? {{email.valid}}</pre>
+            <pre>InValid? {{email.invalid}}</pre>
+
+            <div class='form-group'>
+                <label for='password'>Password</label>
+                <input type='password' class='form-control' placeholder='Password' formControlName='pwd'>
             </div>
-            <div class="form-group">
-                <label for="password">Language</label>
+            <div class='form-group'>
+                <label for='password'>Language</label>
                 <select class='form-control' formControlName='lang'>
                     <option value=''>Please Select a language</option>
                     <option *ngFor='let lang of langs' [value]='lang'>{{lang}}</option>
                 </select>
             </div>
-            <p>{{msg}}</p>
+            <div class='form-control-feedback' *ngIf='this.myForm.invalid'>
+                <p>Please enter all mandatory fields</p>
+            </div>
             <pre>{{myForm.value | json}}</pre>
-            <button type="submit" class="btn btn-primary" (click)='userSignUp()'>Submit</button>
+            <button type='submit' class='btn btn-primary'>Submit</button>
         </form>
     </div>
 </div>

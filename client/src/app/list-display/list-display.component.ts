@@ -5,7 +5,8 @@ import {MobileService} from '../service/mobile.service';
 
 @Component({
     selector: 'app-list-display',
-    templateUrl: './list-display.component.html'
+    templateUrl: './list-display.component.html',
+    styleUrls: ['list-display.component.css']
 
 })
 

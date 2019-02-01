@@ -13,6 +13,7 @@ import { SignInComponent } from './sign-in/signin.component';
 import { SignUpComponent } from './sign-up/signup.component';
 import { ListDisplayComponent } from './list-display/list-display.component';
 import { ListComponent } from './list/list.component';
+import {SearchComponent} from './search/search.component';
 import { FormatDate } from './format-date/format-date.pipe';
 
 import { MobileService } from './service/mobile.service';
@@ -26,6 +27,7 @@ import { SignUpService } from './service/signup.service';
     SignUpComponent,
     ListDisplayComponent,
     ListComponent,
+    SearchComponent,
     FormatDate
   ],
   imports: [

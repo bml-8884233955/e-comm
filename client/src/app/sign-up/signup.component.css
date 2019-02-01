@@ -8,3 +8,9 @@
     width: 40%;
     min-width: 500px;
 }
+.has-success input{
+border-color: blue
+}
+.has-danger input{
+border-color: red
+}

@@ -2,18 +2,19 @@ import {Component, OnInit, Input} from '@angular/core';
 import {Mobile} from '../mobile';
 
 @Component({
-    selector: 'list',
+    selector: 'app-list',
     templateUrl: './list.component.html'
 })
 
-export class ListComponent implements OnInit{
+export class ListComponent implements OnInit {
     @Input() mobile: Mobile;
 
-    constructor(){
+    constructor() {
 
     }
 
-    ngOnInit(){
+    ngOnInit() {
 
     }
 }
+
