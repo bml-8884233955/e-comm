@@ -19,13 +19,7 @@
                     <p *ngIf='email.errors.pattern'>The Email address must contain at least the @ character</p>
                 </div>
             </div>
-            <pre>Dirty? {{email.dirty}}</pre>
-            <pre>Pristine? {{email.pristine}}</pre>
-            <pre>Touched? {{email.touched}}</pre>
-            <pre>Untouched? {{email.untouched}}</pre>
-            <pre>Valid? {{email.valid}}</pre>
-            <pre>InValid? {{email.invalid}}</pre>
-
+           
             <div class='form-group'>
                 <label for='password'>Password</label>
                 <input type='password' class='form-control' placeholder='Password' formControlName='pwd'>
