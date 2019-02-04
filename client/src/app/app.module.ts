@@ -15,9 +15,13 @@ import { ProductsComponent } from './products/products.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { SearchComponent } from './search/search.component';
 import { FormatDate } from './pipes/format-date.pipe';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductSearchComponent} from './product-search/product-search.component';
 
 import { MobileService } from './service/mobile.service';
 import { SignUpService } from './service/signup.service';
+import { AboutComponent } from './about/about.component';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -28,7 +32,11 @@ import { SignUpService } from './service/signup.service';
     ProductsComponent,
     ProductListComponent,
     SearchComponent,
-    FormatDate
+    ProductDetailComponent,
+    ProductSearchComponent,
+    FormatDate,
+    AboutComponent,
+    CartComponent
   ],
   imports: [
     ReactiveFormsModule,

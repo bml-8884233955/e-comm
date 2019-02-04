@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 // import {MOBILES} from '../mock-mobile';
-import {MobileService} from '../service/mobile.service';
+import { MobileService } from '../service/mobile.service';
 
 
 @Component({
@@ -23,6 +23,6 @@ export class ProductListComponent implements OnInit {
 
     getMobiles(): void {
         this.mobileService.getMobiles()
-                        .subscribe(mobiles => this.mobiles = mobiles);
+            .subscribe(mobiles => this.mobiles = mobiles);
     }
 }
